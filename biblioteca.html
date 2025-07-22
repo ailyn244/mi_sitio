@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSICAMENTE A TU MEDIDA</title>
+  <link rel="stylesheet" href="biblioteca.css" />
+</head>
+<body>
+    <!-- Botón de regresar -->
+<div class="volver-container">
+  <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+</div>
+
+<header class="header">
+  <div class="menu">
+    <img src="https://i.imgur.com/W4p6G6G.png" alt="Logo Musicamente">
+    <h1>🌸 Mi Mundo Musical</h1>
+    <p>Relájate, motívate y sueña a tu ritmo 🎶</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#listas">Listas 🎧</a>
+  <a href="#favoritos">Favoritos 💖</a>
+  <a href="#podcasts">Podcasts 🌿</a>
+</nav>
+
+<section id="listas">
+  <h2>🎶 Listas de Reproducción</h2>
+  <div class="contenido">
+    <img src="https://i.imgur.com/t9hMdPn.png" alt="Lista de música">
+    <div>
+      <p>🌅 Mañana suave</p>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+      <p>🌌 Noche tranquila</p>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<section id="favoritos">
+  <h2>💖 Tus Favoritos</h2>
+  <div class="contenido">
+    <img src="https://i.imgur.com/X39q6Gk.png" alt="Favoritos">
+    <div>
+      <p>⭐ Canción feliz</p>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<section id="podcasts">
+  <h2>🌿 Podcasts Relajantes y Motivacionales</h2>
+  <div class="contenido">
+    <img src="https://i.imgur.com/Ez6YQbE.png" alt="Podcast relax">
+    <div>
+      <p>🧘 Meditación guiada</p>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+
+      <p>💡 Inspiración del día</p>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🔔 Personalización y Seguimiento</h2>
+  <p>¿Quieres que te recordemos momentos para relajarte y seguir tu proceso?</p>
+  <button class="btn" onclick="activarNotificacion()">Sí, activar</button>
+  <p class="respuesta" id="respuesta"></p>
+</section>
+
+<script>
+  function activarNotificacion() {
+    const respuesta = document.getElementById('respuesta');
+    respuesta.textContent = '🔔 ¡Notificaciones activadas con éxito!';
+  }
+</script>
+
+</body>
+</html>

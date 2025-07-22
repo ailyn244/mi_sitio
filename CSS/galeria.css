@@ -1,0 +1,138 @@
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  color: #444;
+  text-align: center;
+}
+
+/* Encabezado */
+.header {
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  padding: 30px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.logo-img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  background: #fff3f3;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #fddce4;
+}
+
+/* Secciones */
+section {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #c94f7c;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Galería de imágenes */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Frases */
+.frases p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.frases p.favorito {
+  color: #d63384;
+  font-weight: bold;
+}
+
+/* Video */
+.video {
+  margin-top: 20px;
+}
+
+.video iframe {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Imagen ampliada */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .galeria img {
+    width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .video iframe {
+    height: 200px;
+  }
+}

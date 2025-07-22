@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌸 MUSICAMENTE | Galería</title>
+  <link rel="stylesheet" href="galeria.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="menu">
+    <img src="https://i.imgur.com/W4p6G6G.png" alt="Logo" class="logo-img" />
+    <h1>🌷 Mi Galería de Inspiración</h1>
+    <p>Un lugar suave y bonito para volver cuando necesites un abrazo</p>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <h2>🖼️ Imágenes que me hacen sentir bien</h2>
+  <div class="galeria">
+    <img src="https://i.imgur.com/z6IT8Ea.jpg" alt="Naturaleza" onclick="ampliarImagen(this)">
+    <img src="https://i.imgur.com/N4nP5zQ.jpg" alt="Taza bonita" onclick="ampliarImagen(this)">
+    <img src="https://i.imgur.com/UNYiRYH.jpg" alt="Cielo rosa" onclick="ampliarImagen(this)">
+  </div>
+</section>
+
+<section>
+  <h2>💌 Frases que me abrazan el corazón</h2>
+  <div class="frases">
+    <p onclick="toggleFavorito(this)">🌼 “Eres suficiente tal y como eres.”</p>
+    <p onclick="toggleFavorito(this)">🌈 “Aunque hoy sea difícil, mañana florecerás otra vez.”</p>
+    <p onclick="toggleFavorito(this)">🫶 “Tu suavidad también es una fuerza.”</p>
+  </div>
+</section>
+
+<section>
+  <h2>🌟 Videos suaves o inspiradores</h2>
+  <div class="video">
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/2OEL4P1Rz04" 
+      title="Relax Music" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- Imagen ampliada -->
+<div id="popup" class="popup" onclick="cerrarPopup()">
+  <img id="popup-img" src="">
+</div>
+
+<script>
+  function ampliarImagen(img) {
+    document.getElementById('popup-img').src = img.src;
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function cerrarPopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  function toggleFavorito(p) {
+    p.classList.toggle('favorito');
+  }
+</script>
+
+</body>
+</html>
