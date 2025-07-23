@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - MusicaMente</title>
-  <link rel="stylesheet" href="login.css" />
+  <meta charset="UTF-8">
+  <title>Login / Registro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>🎧 Inicia Sesión</h2>
-    <form onsubmit="return iniciarSesion(event)">
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" placeholder="Tu nombre de usuario" required />
-
-      <label for="contraseña">Contraseña</label>
-      <input type="password" id="contraseña" placeholder="Tu contraseña" required />
-
-      <button type="submit">Entrar</button>
-      <p class="registro">¿No tienes cuenta? <a href="#">Regístrate</a></p>
-    </form>
+  <div class="container">
+    <h2>Login / Registro</h2>
+    
+    <input type="text" id="username" placeholder="Nombre de usuario" required>
+    <button onclick="login()">Ingresar</button>
+    
+    <p id="message"></p>
   </div>
 
-  <script src="login.js"></script>
+  <script>
+    function login() {
+      const username = document.getElementById('username').value.trim();
+      const message = document.getElementById('message');
+
+      if (!username) {
+        message.textContent = 'Por favor, ingresa un nombre de usuario.';
+        return;
+      }
+
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+
+      if (!users.includes(username)) {
+        users.push(username);
+        localStorage.setItem('users', JSON.stringify(users));
+        message.style.color = 'green';
+        message.textContent = 'Usuario registrado. Redirigiendo...';
+      } else {
+        message.style.color = 'green';
+        message.textContent = 'Bienvenido de nuevo. Redirigiendo...';
+      }
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
