@@ -24,6 +24,22 @@ body {
   border-bottom-right-radius: 30px;
 }
 
+/* NAVBAR */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: rgb(150, 212, 135);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+}
 .header .menu {
   max-width: 1000px;
   margin: 0 auto;
