@@ -1,69 +1,44 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #f8cdda, #fbdcdc);
-  font-family: 'Times New Roman', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-.login-container {
-  background-color: #fff0f5;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
+.container {
+  background: #fff;
+  padding: 40px;
+  max-width: 400px;
+  margin: 80px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
   text-align: center;
-  border: 2px solid #f2a2b7;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-  color: #c94f7c;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  text-align: left;
-  margin-bottom: 0.3rem;
-  color: #444;
-}
-
-input {
-  padding: 0.5rem;
-  border: 1px solid #f2a2b7;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  outline: none;
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  background-color: #f8a6c4;
+  background-color: #007bff;
   color: white;
-  padding: 0.6rem;
+  padding: 12px 20px;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #f58bb2;
+  background-color: #0056b3;
 }
 
-.registro {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-.registro a {
-  color: #c94f7c;
-  text-decoration: none;
+#message {
+  margin-top: 15px;
+  color: red;
 }
